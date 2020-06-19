@@ -1,0 +1,28 @@
+{% extends 'master.html' %}
+{% block content %}
+
+
+
+<section id="contentSection">
+    <h1>Welcome {{user.get_username}}</h1>
+
+    <form action="{% url 'logout' %}" class="method"  method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger sm">Logout</button>
+
+    </form>
+
+
+
+</section>
+
+
+
+<h1> About Page </h1>
+<p> This is about page </p>
+
+{% endblock %}
+
+
+
+

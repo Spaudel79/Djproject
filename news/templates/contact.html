@@ -1,0 +1,30 @@
+{% extends 'master.html' %}
+{% block content %}
+
+
+
+<h1> Contact Page </h1>
+
+
+<form action="" method="post">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" name="jpt" placeholder="name" class="form-control" id="jpt"><br>
+            <label for="name">Email address:</label>
+            <input type="email" name="jpt" placeholder="email" class="form-control" id="jpt"><br>
+            <label for="name">Subject:</label>
+            <input type="" name="jpt" placeholder="subject" class="form-control" id="jpt"><br>
+            <label for="name">Message:</label>
+            <textarea name="name" id="message"  placeholder="message" class="form-control" cols="30" rows="10"></textarea><br>
+
+            <button class="btn btn-success">Submit</button>
+
+ </form>
+
+{% endblock %}
+
+
+
+
+
+

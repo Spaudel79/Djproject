@@ -1,0 +1,27 @@
+{% extends 'master.html' %}
+
+{% block content %}
+
+{% for abc in BlogData %}
+
+
+
+<h3><a href="{% url 'bloglaliga' %}">{{abc.title}}</a> </h3>
+Created at {{abc.created_at}}
+<hr>
+
+<img src="{{abc.image.url}}" alt="" class="image-responsive" style="width: 350px;">
+<hr>
+
+
+
+<p>
+    {{abc.description}}
+</p>
+
+<a href="{% url 'bloglaliga' %}">Read more...</a>
+
+
+{% endfor %}
+
+{% endblock %}

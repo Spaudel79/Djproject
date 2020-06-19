@@ -1,0 +1,30 @@
+{% extends 'master.html' %}
+{% block content %}
+
+
+<a href=" "><h1>{{Blogdetails.title}}</h1></a>
+<hr>
+
+<img src="{{Blogdetails.image.url}}" alt="" class="image-responsive" style="width: 350px;">
+<hr>
+Created at {{Blogdetails.created_at}}
+<hr>
+
+<p>
+    {{ Blogdetails.description}}
+
+</p>
+
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger btn-sm"><a href="{% url 'delete' Blogdetails.pk %}">Delete</a></button>
+</form>
+
+<!--<a href="{% url 'delete' Blogdetails.pk %}">Delete</a>-->
+
+
+    {% endblock %}
+
+<!--{% url 'delete' %}-->

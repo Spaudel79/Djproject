@@ -1,0 +1,20 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<div class="col-md-12">
+    {% for blog in Blogdata %}
+    <h3><a href="">{{blog.title}}</a></h3>
+    Created at {{blog.created_at}}
+    <hr>
+    <img src="{{blog.image.url}}" alt="" class="image-responsive" style="width: 350px;">
+
+    <p>
+        {{blog.description}}
+
+    </p>
+
+    <div class="fb-comments" data-href="http://127.0.0.1:8000/blog-details/1" data-width="" data-numposts="0"></div>
+    {% endfor %}
+</div>
+
+{% endblock %}

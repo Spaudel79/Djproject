@@ -1,0 +1,22 @@
+{% extends 'master.html' %}
+{% block content %}
+
+
+
+
+{% for abc in Blogdetails %}
+<a href="{% url 'gn-details' abc.pk %}">{{abc.title}}</a>
+<hr>
+<img src="{{abc.image.url}}" alt="" class="image-responsive" style="width: 350px;">
+
+<p>
+    {{ abc.description}}
+</p>
+
+<a href="{% url 'gn-details' abc.pk %}">Read more...</a>
+
+{% endfor %}
+
+{% endblock %}
+
+

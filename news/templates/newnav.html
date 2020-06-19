@@ -1,0 +1,28 @@
+<section id="navArea">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav main_nav">
+          <li class="active"><a href="{% url 'home' %}"><span class="fa fa-home desktop-home"></span>
+            <span class="mobile-show">Home</span></a></li>
+          <li><a href="{% url 'blogcricket' %}">Cricket</a></li>
+          <li><a href="{% url 'blogtennis' %}">Tennis</a></li>
+          <li><a href="{% url 'blognba' %}">NBA</a></li>
+          <li class="dropdown">
+              <a href="{% url 'blog' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Football</a>
+            <ul class="dropdown-menu" role="menu">
+               <li><a href="{% url 'blogepl' %}">EPL</a></li>
+               <li><a href="{% url 'bloglaliga' %}">LaLiga</a></li>
+               <li><a href="{% url 'blogseriea' %}">Serie-A</a></li>
+                <li><a href="{% url 'blogcleague' %}">Champions League</a></li>
+            </ul>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a href="{% url 'sign-up' %}">Sign-Up</a></li>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
